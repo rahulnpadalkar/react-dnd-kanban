@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.3.5",
+    "@dnd-kit/core": "^6.0.5",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@testing-library/jest-dom": "^5.16.4",
