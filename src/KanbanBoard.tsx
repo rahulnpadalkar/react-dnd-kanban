@@ -12,7 +12,11 @@ export default function KanbanBoard() {
   const [uItems, setuItems] = useState<Array<Cards>>([]);
 
   const addNewCard = (title: string) => {
-    setuItems([...uItems, { title }]);
+    if(!!title) {
+      setuItems([...uItems, { title }]);
+    
+    
+    }  
   };
 
   return (
@@ -23,6 +27,8 @@ export default function KanbanBoard() {
         const title = e.active.data.current?.title ?? "";
         const index = e.active.data.current?.index ?? 0;
         const parent = e.active.data.current?.parent ?? "ToDo";
+
+        console.log('over:', e.over, 'active', e.active)
         if (container === "ToDo") {
           setTodoItems([...todoItems, { title }]);
         } else if (container === "Done") {
